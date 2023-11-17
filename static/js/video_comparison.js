@@ -14,7 +14,7 @@ function playVids(videoId) {
 
     
     if (vid.readyState > 3) {
-        // vid.play();
+        vid.play();
 
         function trackLocation(e) {
             // Normalize to [0, 1]
@@ -110,7 +110,7 @@ function resizeAndPlay(element)
   var cv = document.getElementById(element.id + "Merge");
   cv.width = element.videoWidth/2;
   cv.height = element.videoHeight;
-//   element.play();
+  element.play();
   element.style.height = "0px";  // Hide video without stopping it
     
   playVids(element.id);
