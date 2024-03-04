@@ -48,7 +48,7 @@ If you want a quick try, run:
 ```shell
 pip install gdown
 bash download_sample_model.sh
-python gs_simulation.py --model_path ./models/ficus_whitebg-trained/ --output_path output --config ./config/ficus_config.json --render_img --compile_video --white_bg
+python gs_simulation.py --model_path ./model/ficus_whitebg-trained/ --output_path output --config ./config/ficus_config.json --render_img --compile_video --white_bg
 ```
 
 ## Custom Dynamics
