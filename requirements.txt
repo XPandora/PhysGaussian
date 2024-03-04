@@ -2,7 +2,7 @@ h5py==3.10.0
 numpy==1.24.1
 opencv_python==4.8.1.78
 opencv_python_headless==4.9.0.80
-Pillow==9.3.0
+Pillow==10.2.0
 plyfile==1.0.3
 PyMCubes==0.1.4
 pymeshlab==2023.12.post1
