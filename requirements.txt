@@ -1,0 +1,15 @@
+h5py==3.10.0
+numpy==1.24.1
+opencv_python==4.8.1.78
+opencv_python_headless==4.9.0.80
+Pillow==9.3.0
+plyfile==1.0.3
+PyMCubes==0.1.4
+pymeshlab==2023.12.post1
+scipy==1.12.0
+setuptools==68.0.0
+taichi==1.5.0
+torch==2.0.0
+torchvision==0.15.1
+tqdm==4.66.1
+warp_lang==0.10.1

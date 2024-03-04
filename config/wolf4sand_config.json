@@ -1,0 +1,96 @@
+{
+    "opacity_threshold": 0.02,
+    "rotation_degree": [
+        0.0
+    ],
+    "rotation_axis": [
+        0
+    ],
+    "substep_dt": 2e-5,
+    "frame_dt": 4e-2,
+    "frame_num": 50,
+    "E": 5e7,
+    "nu": 0.3,
+    "material": "sand",
+    "density": 2000,
+    "g": [
+        0.0,
+        0.0,
+        -9.8
+    ],
+    "friction_angle": 30,
+    "n_grid": 200,
+    "particle_filling": {
+        "n_grid": 100,
+        "density_threshold": 100.0,
+        "search_threshold": 1.0,
+        "search_exclude_direction": 2,
+        "ray_cast_direction": 4,
+        "max_particles_num": 2000000,
+        "max_partciels_per_cell": 1,
+        "boundary": [
+            0.4,
+            1.6,
+            0.4,
+            1.6,
+            0.4,
+            1.6
+        ],
+        "smooth": true,
+        "visualize": true
+    },
+    "boundary_conditions": [
+        {
+            "type": "bounding_box"
+        },
+        {
+            "type": "surface_collider",
+            "point": [
+                1,
+                1,
+                0.48
+            ],
+            "normal": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "surface": "sticky",
+            "friction": 0.0,
+            "start_time": 0,
+            "end_time": 1e3
+        },
+        {
+            "type": "release_particles_sequentially",
+            "normal": [
+                1,
+                0,
+                0
+            ],
+            "start_position": 1.5,
+            "end_position": 0.5,
+            "num_layers": 50,
+            "start_time": 0.0,
+            "end_time": 1.5
+        }
+    ],
+    "mpm_space_vertical_upward_axis": [
+        0,
+        0,
+        1
+    ],
+    "mpm_space_viewpoint_center": [
+        1,
+        1,
+        0.8
+    ],
+    "default_camera_index": -1,
+    "show_hint": false,
+    "init_azimuthm": 170,
+    "init_elevation": 0,
+    "init_radius": 1.6,
+    "move_camera": true,
+    "delta_a": -2.4,
+    "delta_e": 0.8,
+    "delta_r": 0.0
+}
