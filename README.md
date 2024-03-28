@@ -121,7 +121,6 @@ To fix or move the reconstructed object, specify the boundary condition either o
 ## TODO
 
 - Add more pretrained models.
-- Colab script.
 
 ## Citation
 
