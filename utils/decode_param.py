@@ -26,6 +26,8 @@ def decode_param_json(json_file):
 
     if "nu" in sim_params.keys():
         material_params["nu"] = sim_params["nu"]
+        if material_params["nu"] > 0.5 or material_params["nu"] < 0.0:
+            raise ValueError("Poisson's ratio should be less than 0.5")
     else:
         material_params["nu"] = 0.4
 
