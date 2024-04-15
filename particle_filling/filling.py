@@ -256,20 +256,6 @@ def compute_particle_volume(
         particle_vol[pi] = (grid_dx * grid_dx * grid_dx) / grid[i, j, k]
 
 
-@ti.kernel
-def assign_particle_to_grid(
-    pos: ti.template(),
-    grid: ti.template(),
-    grid_dx: float,
-):
-    for pi in range(pos.shape[0]):
-        p = pos[pi]
-        i = ti.floor(p[0] / grid_dx, dtype=int)
-        j = ti.floor(p[1] / grid_dx, dtype=int)
-        k = ti.floor(p[2] / grid_dx, dtype=int)
-        ti.atomic_add(grid[i, j, k], 1)
-
-
 def get_particle_volume(pos, grid_n: int, grid_dx: float, unifrom: bool = False):
     ti_pos = ti.Vector.field(n=3, dtype=float, shape=pos.shape[0])
     ti_pos.from_torch(pos.reshape(-1, 3))
