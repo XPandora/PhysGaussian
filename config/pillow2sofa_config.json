@@ -1,0 +1,148 @@
+{
+    "opacity_threshold": 0.02,
+    "rotation_degree": [],
+    "rotation_axis": [],
+    "substep_dt": 1e-4,
+    "frame_dt": 2e-2,
+    "frame_num": 300,
+    "E": 1e4,
+    "nu": 0.3,
+    "n_grid": 100,
+    "material": "jelly",
+    "density": 2000,
+    "g": [
+        0.0,
+        0,
+        -5.0
+    ],
+    "sim_area": [
+        -0.65,
+        0.65,
+        -0.6,
+        0.6,
+        -1,
+        1
+    ],
+    "particle_filling": {
+        "n_grid": 128,
+        "density_threshold": 40.0,
+        "search_threshold": 0.5,
+        "search_exclude_direction": 5,
+        "ray_cast_direction": 0,
+        "max_particles_num": 2000000,
+        "max_partciels_per_cell": 4,
+        "boundary": [
+            0.6,
+            1.4,
+            0.6,
+            1.4,
+            0.92,
+            1.72
+        ]
+    },
+    "boundary_conditions": [
+        {
+            "type": "bounding_box"
+        },
+        {
+            "type": "cuboid",
+            "point": [
+                1,
+                1,
+                0.5
+            ],
+            "size": [
+                1.0,
+                1.0,
+                0.05
+            ],
+            "velocity": [
+                0,
+                0,
+                0
+            ],
+            "start_time": 0,
+            "end_time": 1e3,
+            "reset": 1
+        },
+        {
+            "type": "enforce_particle_translation",
+            "point": [
+                1,
+                1,
+                0.5
+            ],
+            "size": [
+                1,
+                1,
+                0.4
+            ],
+            "velocity": [
+                0,
+                0,
+                0
+            ],
+            "start_time": 0,
+            "end_time": 1e3
+        },
+        {
+            "type": "cuboid",
+            "point": [
+                1,
+                1,
+                1.2
+            ],
+            "size": [
+                1.0,
+                1.0,
+                0.12
+            ],
+            "velocity": [
+                0,
+                0,
+                0
+            ],
+            "start_time": 0,
+            "end_time": 0.5
+        },
+        {
+            "type": "cuboid",
+            "point": [
+                1,
+                1,
+                1.45
+            ],
+            "size": [
+                1.0,
+                1.0,
+                0.1
+            ],
+            "velocity": [
+                0,
+                0,
+                0
+            ],
+            "start_time": 0.0,
+            "end_time": 1.0
+        }
+    ],
+    "mpm_space_vertical_upward_axis": [
+        0,
+        0,
+        1
+    ],
+    "mpm_space_viewpoint_center": [
+        1,
+        1,
+        1
+    ],
+    "default_camera_index": -1,
+    "show_hint": false,
+    "init_azimuthm": -90.0,
+    "init_elevation": 30.0,
+    "init_radius": 2.5,
+    "move_camera": true,
+    "delta_a": 0.5,
+    "delta_e": 0.0,
+    "delta_r": 0.0
+}
