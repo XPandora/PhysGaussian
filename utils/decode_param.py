@@ -140,6 +140,11 @@ def decode_param_json(json_file):
     else:
         preprocessing_params["sim_area"] = None
 
+    if "scale" in sim_params.keys():
+        preprocessing_params["scale"] = sim_params["scale"]
+    else:
+        preprocessing_params["scale"] = 1.0
+
     if "particle_filling" in sim_params.keys():
         preprocessing_params["particle_filling"] = sim_params["particle_filling"]
         filling_params = preprocessing_params["particle_filling"]

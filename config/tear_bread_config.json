@@ -1,0 +1,101 @@
+{
+    "opacity_threshold": 0.02,
+    "rotation_degree": [
+        25.0
+    ],
+    "rotation_axis": [
+        1
+    ],
+    "substep_dt": 1e-4,
+    "frame_dt": 1e-2,
+    "frame_num": 300,
+    "E": 2e3,
+    "nu": 0.3,
+    "material": "jelly",
+    "rpic_damping": 0.5,
+    "grid_v_damping_scale": 0.9995,
+    "density": 200,
+    "scale": 0.6,
+    "g": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "n_grid": 150,
+    "particle_filling": {
+        "n_grid": 100,
+        "density_threshold": 100.0,
+        "search_threshold": 0.2,
+        "search_exclude_direction": -1,
+        "ray_cast_direction": 4,
+        "max_particles_num": 2000000,
+        "max_partciels_per_cell": 1,
+        "smooth": true,
+        "boundary":
+        [
+            0.64,
+            1.36,
+            0.64,
+            1.36,
+            0.64,
+            1.36
+        ],
+        "visualize": true
+    },
+    "boundary_conditions": [
+        {
+            "type": "bounding_box"
+        },
+        {
+            "type": "enforce_particle_translation",
+            "point": [
+                1.0,
+                1.25,
+                1.0
+            ],
+            "size": [
+                1.0,
+                0.05,
+                1.0
+            ],
+            "velocity": [
+                0.0,
+                0.2,
+                0.0
+            ],
+            "start_time": 0.0,
+            "end_time": 1e3
+        },
+        {
+            "type": "enforce_particle_translation",
+            "point": [
+                1.0,
+                0.75,
+                1.0
+            ],
+            "size": [
+                1.0,
+                0.05,
+                1.0
+            ],
+            "velocity": [
+                0.0,
+                -0.2,
+                0.0
+            ],
+            "start_time": 0.0,
+            "end_time": 2.2
+        }
+    ],
+    "mpm_space_vertical_upward_axis": [0,0,1],
+    "mpm_space_viewpoint_center": [1,1,1],
+    "default_camera_index": -1,
+    "show_hint": false,
+    "init_azimuthm": 55,
+    "init_elevation": 13,
+    "init_radius": 2.0,
+    "move_camera": false,
+    "delta_a": 0.05,
+    "delta_e": 0.1,
+    "delta_r": 0.00
+}

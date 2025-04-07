@@ -118,10 +118,6 @@ To fix or move the reconstructed object, specify the boundary condition either o
     - `start_time` and `end_time`: Time duration of this boundary condition
 - `enforce_particle_translation`: Enforces a boundary condition on particles with parameters similar to those for grids.
 
-## TODO
-
-- Add more pretrained models.
-
 ## Citation
 
 ```

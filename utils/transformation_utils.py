@@ -3,12 +3,12 @@ import numpy as np
 from utils.camera_view_utils import *
 
 
-def transform2origin(position_tensor):
+def transform2origin(position_tensor, scale = 1.0):
     min_pos = torch.min(position_tensor, 0)[0]
     max_pos = torch.max(position_tensor, 0)[0]
     max_diff = torch.max(max_pos - min_pos)
     original_mean_pos = (min_pos + max_pos) / 2.0
-    scale = 1.0 / max_diff
+    scale = scale / max_diff
     original_mean_pos = original_mean_pos.to(device="cuda")
     scale = scale.to(device="cuda")
     new_position_tensor = (position_tensor - original_mean_pos) * scale

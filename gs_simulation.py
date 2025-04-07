@@ -169,7 +169,7 @@ if __name__ == "__main__":
         init_opacity = init_opacity[mask, :]
         init_shs = init_shs[mask, :]
 
-    transformed_pos, scale_origin, original_mean_pos = transform2origin(rotated_pos)
+    transformed_pos, scale_origin, original_mean_pos = transform2origin(rotated_pos, preprocessing_params["scale"])
     transformed_pos = shift2center111(transformed_pos)
 
     # modify covariance matrix accordingly
