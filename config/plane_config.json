@@ -1,0 +1,125 @@
+{
+    "opacity_threshold": 0.02,
+    "rotation_degree": [
+        45.0,6.5
+    ],
+    "rotation_axis": [
+        1,2
+    ],
+    "substep_dt": 1e-4,
+    "frame_dt": 1e-2,
+    "frame_num": 400,
+    "E": 1e5,
+    "yield_stress": 1e2,
+    "nu": 0.3,
+    "material": "metal",
+    "grid_v_damping_scale": 0.9999,
+    "density": 1000,
+    "g": [
+        0.0,
+        0.0,
+        0.0
+    ],
+    "n_grid": 120,
+    "sim_area": [
+        -2.1,
+        -0.1,
+        -0.7,
+        0.9,
+        -1.0,
+        1.0
+    ],
+    "particle_filling":{
+        "n_grid": 50,
+        "density_threshold": 40.0,
+        "search_threshold": 0.5,
+        "search_exclude_direction": 0,
+        "ray_cast_direction": 1,
+        "max_particles_num": 2000000,
+        "max_partciels_per_cell": 1,
+        "boundary": [
+            0.86,
+            1.46,
+            0.7,
+            1.3,
+            0.7,
+            1.3
+        ]
+    },
+    "boundary_conditions": [
+        {
+            "type": "bounding_box"
+        },
+        {
+            "type": "enforce_particle_translation",
+            "point": [
+                1.18,
+                1.0,
+                0.5
+            ],
+            "size": [
+                0.25,
+                0.25,
+                0.5
+            ],
+            "velocity": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "start_time": 0.0,
+            "end_time": 1e3
+        },
+        {
+            "type": "enforce_particle_translation",
+            "point": [
+                1.45,
+                1.0,
+                1.0
+            ],
+            "size": [
+                0.09,
+                0.5,
+                0.5
+            ],
+            "velocity": [
+                0.0,
+                0.0,
+                0.0
+            ],
+            "start_time": 0.0,
+            "end_time": 1e3
+        },
+        {
+            "type": "enforce_particle_velocity_rotation",
+            "point": [0.7,1.03,0.98],
+            "normal": [1,0,0],
+            "half_height_and_radius": [0.12, 0.6],
+            "rotation_scale": 1.0,
+            "translation_scale": 0.0,
+            "start_time": 0.0,
+            "end_time": 0.5
+        },
+        {
+            "type": "enforce_particle_velocity_rotation",
+            "point": [0.7,1.03,0.98],
+            "normal": [1,0,0],
+            "half_height_and_radius": [0.12, 0.6],
+            "rotation_scale": -1.0,
+            "translation_scale": 0.0,
+            "start_time": 1.0,
+            "end_time": 2.0
+        }
+    ],
+    "mpm_space_vertical_upward_axis": [0,-1,0],
+    "mpm_space_viewpoint_center": [1,1,1],
+    "default_camera_index": -1,
+    "show_hint": false,
+    "init_azimuthm": 150,
+    "init_elevation": 10,
+    "init_radius": 2.7,
+    "move_camera": true,
+    "delta_a": 0.04,
+    "delta_e": 0.0,
+    "delta_r": 0.00
+}
